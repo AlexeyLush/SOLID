@@ -34,7 +34,7 @@ public abstract class AbstractPerson {
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
-        if (this.getClass() != object.getClass()) return false;
+        if (object == null || this.getClass() != object.getClass()) return false;
         AbstractPerson person = (AbstractPerson) object;
         return Objects.equals(name, person.name) && state == person.state;
     }

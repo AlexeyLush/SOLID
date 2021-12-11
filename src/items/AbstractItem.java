@@ -35,7 +35,7 @@ public abstract class AbstractItem {
     @Override
     public boolean equals(Object object) {
         if (this == object) return true;
-        if (this.getClass() != object.getClass()) return false;
+        if (object == null || this.getClass() != object.getClass()) return false;
         AbstractItem that = (AbstractItem) object;
         return Objects.equals(title, that.title) && Objects.equals(adjective, that.adjective);
     }
