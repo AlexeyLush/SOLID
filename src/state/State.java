@@ -4,7 +4,8 @@ public enum State {
     SILENTLY("молча"),
     HAPPY("весел"),
     SOOTH("правда"),
-    FORTUNATE("счастлив");
+    FORTUNATE("счастлив"),
+    WIDE("широко");
 
     private String state;
 

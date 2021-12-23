@@ -48,6 +48,8 @@ public abstract class AbstractItem {
                 '}';
     }
 
+
+
     @Override
     public int hashCode() {
         return Objects.hash(title, adjective);

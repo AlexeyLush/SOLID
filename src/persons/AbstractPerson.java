@@ -15,21 +15,30 @@ public abstract class AbstractPerson {
         this.name = name;
     }
 
-    public String getName(){
-        return this.name;
+
+    public class Person{
+
+        public String getName(){
+            return AbstractPerson.this.name;
+        }
+
+        public String getState(){
+            return AbstractPerson.this.state.getState();
+        }
+
+        public String getPlace(){
+            return AbstractPerson.this.place.getPlace();
+        }
+
+        public void setState(State state){
+            AbstractPerson.this.state = state;
+        }
+
+        public void setPlace(Place place){
+            AbstractPerson.this.place = place;
+        }
     }
 
-    public String getState(){
-        return this.state.getState();
-    }
-
-    public void setState(State state){
-        this.state = state;
-    }
-
-    public String getPlace() { return this.place.getPlace(); }
-
-    public void setPlace(Place place) { this.place = place; }
 
     @Override
     public boolean equals(Object object) {
